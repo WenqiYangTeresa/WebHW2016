@@ -8,3 +8,4 @@ Recipe for Yogurt
 6.Wait for the yogurt to set.
 7.Cool the yogurt.
 8.Your next batch of homemade yogurt!! Enjoy!!!
+Homemade is healthy!
