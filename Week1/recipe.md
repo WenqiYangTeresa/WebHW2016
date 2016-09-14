@@ -1,4 +1,4 @@
-Recipe for Yogurt
+Recipe for Homemade Yogurt
 
 1.Heat the milk. Pour the milk into the Dutch oven and set over medium to medium-high heat.
 2.Cool the milk.
