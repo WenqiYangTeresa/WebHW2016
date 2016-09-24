@@ -1,0 +1,68 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+html{
+	/* background url(link to img) repeatX repeatY centerX centerY fixed or scroll*/
+	background: url(../img/bg.jpg) no-repeat center center fixed;
+	background-size: cover;
+	/*alternative browser*/
+	/*legacy CSS3 fallbacks*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	/*internet explorer*/
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg.jpg', sizingMethod='scale')";
+}
+
+div.container{
+	width: 900px;
+	margin: 0 auto;
+}
+
+div.polaroid{
+	position:relative;
+	width: 240px;
+	display: inline-block;
+	margin: 20px;
+}
+
+
+
+/*only apply to img in polaroid*/
+.polaroid img{
+	width: 100%;
+	height: auto;
+	border:10px solid #FFFFFF;
+	border-bottom: 45px solid #FEF9EF;
+	/* box shadow - h-shadow | v- shadow | blur | spread | color */
+	box-shadow: 3px 3px 20px 3px rgba(255,255,255,0.3);
+	/*legacy fallbacks*/
+	-webkit-box-shadow: 3px 3px 20px 3px rgba(255,255,255,0.3);
+	-moz-box-shadow: 3px 3px 20px 3px rgba(255,255,255,0.3);
+	-o-box-shadow: 3px 3px 20px 3px rgba(255,255,255,0.3);
+}
+
+/*absolute positioning of an element is based on the browser dimensions */
+/*relative positioning is relative to where it would have rendered by default*/
+/*absolute child to relative parents*/
+
+/*only apply to p in polaroid*/
+.polaroid p{
+	color: red;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+
+}
+
+
+
+
+
+
+

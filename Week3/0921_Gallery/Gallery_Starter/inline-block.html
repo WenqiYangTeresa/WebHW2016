@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inline block vs block float Demo/Issues</title>
+	<style type="">
+		/*universal selector for all tags on page*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		main, article {
+			background-color: rgba(255,0,0,0.3);
+		}
+
+		main{
+			width: 900px;
+			margin:0 auto;
+
+		}
+
+		article{
+			/*modify width and height*/
+			width: 300px;
+			height: 300px;
+			/* 300-4 = 296px */
+			width: 296px;
+			height: 296px;
+			/*float: left;*/
+			border: 2px solid blue;
+			/* add margin*/
+			margin: 10px;
+			/*296- 20 = 276*/
+			width: 276px;
+			height: 276px;
+			display: inline-block;
+			/*inline block adds extra margin to your blocks and mess up your stack! We can fix this with a negative about 4px margin OR
+			subtract 4px from horizontal margins*/
+			/*margin: 10px 8px;*/
+			width: 273px;
+			height: 273px;
+
+		}
+
+		.clear-fix:after {
+			display: block;
+			clear:both;
+			/*ensure some older compatibility*/
+			height:0;
+			font-size:0;
+			content:"";
+			/*extra backup*/
+			visibility: hidden;
+
+		}
+
+		.clear{
+			clear:both;
+		}
+
+	</style>
+</head>
+<body>
+
+	<main class="clear-fix">
+	<!--article is block element could be div and section-->
+		<article>1</article>
+		<article>2</article>
+		<article>3</article>
+		<!--br class="clear"-->
+	</main>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Box Model</title>
+	<style type="text/css">
+	/*tag or element selector */
+		div{
+			float: left;
+		}
+			
+			#special{
+				background-color: rgb(255,0,0);
+				border: 0px;
+				padding: 0px;
+				margin: 20px;
+			}
+			/*put id on the top*/
+
+		/* class selector thumbnail */
+		.thumbnail{
+			/* RRGGBB */
+			background-color: #0022FF ;
+			width: 200px ;
+			height: 200px ;
+		}
+
+		/* a second class that explores border */
+		.outline-red{
+			border-width: 2px;
+			border-style: solid;
+			border-color: pink; /*color keyword */
+			/* shorthand border: width | style | color; */
+			/*override what comes before */
+			border: 2px solid #FF06F4;
+			/* override left border property */
+			border-left: 10px dashed yellow;
+		}
+
+		/* padding applies spacing within the element between its edge and the content within */
+		.padded{
+			padding: 15px;
+			padding-top: 40px;
+			/*padding topBottom leftRight*/
+			padding: 20px 2px;
+			/*padding top right bottom left*/
+			padding: 10px 20px 30px 40px;
+			/*must apply unit. id selector can only be applied to one element per page and carries the most specificity weight*/
+		}
+	</style>
+	<!--Define a class: (.name) internal style sheet CSS-->
+</head>
+
+<body>
+
+	<div class="thumbnail">This is going to be a 200px * 200px div</div>
+	<!--we can apply a class to multiple div on our page -->
+	<div class="thumbnail">Third div!</div>
+	<div class="thumbnail outline-red">Fourth div is 204px*204px cuz borders take space!</div>
+	<div class="thumbnail padded">Take a look at the contents in this div.</div>
+	<!--override all defaultswith an ID-->
+	<div class="thumbnail outline-red padded" id="special">I am overrided!!!</div>
+
+</body>
+</html>

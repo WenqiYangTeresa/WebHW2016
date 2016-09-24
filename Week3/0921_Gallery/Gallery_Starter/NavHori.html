@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple vertical NavBar</title>
+	
+	<style type="text/css">
+		body{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+		ul{
+			/*remove bullet points*/
+			list-style-type:none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			width: 500px;
+			background-color: #999;
+			float: right;
+
+		}
+
+		ul li{
+			float: left;
+			width: 100px;
+		}
+		/*apply to a nexted in li*/
+		li a{
+			display: block;
+			text-align: center;
+			padding:0px 10px;
+			text-decoration: none;
+			color: pink;
+
+		}
+
+		li a:hover{
+			background-color: black;
+			color:red;
+		}
+
+	</style>
+</head>
+<body>
+<ul>
+	<li><a href="#">HOME</a></li>
+	<li><a href="#">NEWS</a></li>
+	<li><a href="#">ABOUT</a></li>
+	<li><a href="#">CONTACT</a></li>
+</ul>
+
+</body>
+</html>

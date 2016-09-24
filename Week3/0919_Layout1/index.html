@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Layout 1: header, footer, main, sidebar using pixels</title>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<header>Header with 100% width</header>
+	<main>
+		<h1>this is an article with a sidebar</h1>
+		<article>
+			<h3>an article with 3 sections</h3>
+			<section><h4>S1</h4></section>
+			<section><h4>S2</h4></section>
+			<section><h4>S3</h4></section>
+		</article>
+		<aside><h3>some sidebar</h3></aside>
+		<br class="clear"/>
+		<!--use a class clear on br to fix stacking issue, which acts lke a null-->
+	</main>
+	<footer>footer</footer>
+</div>
+</body>
+</html>

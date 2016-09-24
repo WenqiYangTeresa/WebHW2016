@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3 equal columns 2 ways</title>
+	<style type="text/css">
+		div, header, footer, section, article, aside, main{
+			background-color: rgba(20,10,255,0.3);
+			min-height: 100px;
+		}
+
+		main{
+			width: 960px;
+			margin:0 auto;
+		}
+		.col-pixels{
+			width:300px;
+			margin: 0 10px;
+			float: left;
+		}
+/*add a block empty content element with zero height that clears both sides to avoid wrapping/floating issues*/
+		.clear-fix:after {
+			display: block;
+			clear:both;
+			/*ensure some older compatibility*/
+			height:0;
+			font-size:0;
+			content:"";
+			/*extra backup*/
+			visibility: hidden;
+		}
+
+		article.col-fluid section{
+		/* base on 100% browser width - 8 * 2.5% / 4 */
+		width: 20%;
+		margin: 2.5%;
+		float: left;
+		}
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<h1>header</h1>
+		<!--full width header because we don;t place the header or footer under a wrapper-->
+	</header>
+
+	<main class="clear-fix">
+		<h2>3 colomns fixed width</h2>
+		<article class="col-pixels"></article>
+		<article class="col-pixels"></article>
+		<article class="col-pixels"></article>
+	</main>
+
+	<h2>Fluid Layout</h2>
+	<article class="clear-fix col-fluid">
+		<section><h3>Fluid Section 1</h3></section>
+		<section><h3>Fluid Section 2</h3></section>
+		<section><h3>Fluid Section 3</h3></section>
+	</article>
+
+	<footer>
+		<small>footer</small>
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+/*this is where we define our style*/
+/*give those tags properties*/
+div, header, footer, article, section, aside{
+	min-height:200px;
+	background-color: rgba(50,100,255,0.6);
+}
+
+/*this class only applies to div we can reuse the nme wrapper*/
+div.wrapper{
+	width: 900px;
+	margin: 0 auto; /*center, auto means left and right*/
+	padding: 10px;
+}
+
+article{
+	width: 600px;
+	float: left;
+}
+
+aside{
+	width: 300px;
+	float: left;
+}
+
+.clear{
+	clear: both;
+}
