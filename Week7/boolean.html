@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOOLEANS</title>
+	<script type="text/javascript">
+		var isON = true;
+		console.log(isON);
+
+		function switchONOFF(){
+			if (isON == true){
+				alert("the boolean is on is set to true switch to false now");
+				isON = false;
+			}else{
+				alert("the boolean is on is set to false switch to true now");
+				isON = !isON;
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="switchONOFF()">Switch On Off</button>
+</body>
+</html>

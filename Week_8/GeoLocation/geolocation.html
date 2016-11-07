@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>geolocation</title>
+	<script type="text/javascript">
+		function getLocation(){
+			//check to see if the device ot browser supports or allows geo location
+			if (navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(setPosition);
+
+			}else{
+				alert("geolocation is not supported by your browser");
+			}
+		}
+		function setPosition(position){
+			console.log(position.coords.latitude);
+			var lat = position.coords.latitude;
+			var lon = position.coords.longitude;
+
+			//grab location div as a variable
+			var loc = document.getElementById("location");
+			loc.innerHTML = "Latitude: " + lat + "<br> Longitude: " + lon;
+		}
+
+		document.addEventListerner("DOMContentLoaded", function(event){
+			getLocation(); 
+			//so now if you want to take this content into a separate js sheet it still works
+		});
+	</script>
+</head>
+<body onload="getLocation();">
+	<div id="location"></div>
+</body>
+</html>

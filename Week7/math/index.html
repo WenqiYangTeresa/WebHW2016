@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>math 101</title>
+	<script type="text/javascript">
+		//integer data types
+
+		//declaring variables and assigning values to those variables in one line
+		var x = 15;
+		var y = 35;
+
+		//simple math functions
+		//addition + 
+		console.log(x+y);
+		console.log(x-y);
+		console.log(x*y);
+		console.log(x/y);
+
+		//modular operator % it returns division remainder
+		console.log(y%x);
+		console.log("***************");
+
+		x++;
+		// x+=1 x=x+1
+		console.log(x);
+		y--;
+		console.log(y);
+		x+=5;
+		console.log(x);
+		console.log("***************");
+		//floating point number data type
+		var num1 = 2.2;
+		var num2 = 3.3;
+
+		//access JS math object for some built in math methods. round up round down
+		console.log(Math.round(num2));
+		console.log(Math.floor(num2));
+		console.log(Math.ceil(num2));
+		console.log("***************");
+		//random
+		var rn = Math.random();
+		console.log("random" + rn + "!!!");
+		var something = Math.round(rn);
+		if(something === 0){
+			alert("heads");
+		}else{
+			alert("tails");
+		}
+
+		console.log("***************");
+
+		function randomNum(n){
+			var rn = Math.round(n*Math.random(n));
+			return rn;
+		}
+
+		var myRandomInt = randomNum(1000);
+		console.log(myRandomInt);
+		alert(myRandomInt);
+
+		function randomNumRange(min,max){
+			var rn = Math.round(Math.random()*(max-min)+min);
+			return rn;
+		}
+		var rr = randomNumRange(50,1000);
+		console.log(rr);
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
