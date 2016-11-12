@@ -119,9 +119,10 @@ a{
 	color: #3AD39F;
 	border: 2px #3AD39F solid;
 }
-#equals a:hover{
-	color: #A8D3C6;
-	border: 2px #A8D3C6 solid;
+#numbers .equalscolor:hover{
+	/*background-color: #FF2779;*/
+	border: 2px #2627FF solid;
+	color: #2627FF;
 }
 #others a:hover{
 	color: #4CE7F6;
