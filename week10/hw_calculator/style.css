@@ -1,0 +1,129 @@
+@font-face{
+	font-family: 'Digit';
+	src: url(digital-7.ttf);
+}
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica, sans-serif;
+	user-select: none;
+}
+html{background-color: #0D0525;}
+a{
+	cursor: pointer;
+	transition: all 0.2s ease;
+	
+
+}
+#calculator{
+	background-color: #0D0525;
+	width: 320px;
+	height: 475px;
+	border: 2px #FF2779 dashed;
+	margin: 90px auto;
+	padding: 5px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+#total {
+    height: 70px;
+    width: 260px;
+    margin:auto;
+    border: 2px #FF2779 solid;
+    margin: 0 15px;
+    margin-left: 14px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 40px;
+    line-height: 70px;
+    padding: 0 15px;
+    border-radius: 5px;
+    color: #FF2779;
+    font-family: 'Digit', sans-serif;
+    overflow: hidden;
+    letter-spacing: 2px;
+}
+
+#numbers, #operators {
+	margin: auto;
+	display: block;
+	float: left;
+	margin-top: 6px;	
+}
+#numbers{
+	width: 237px;
+	margin-left: 5px;
+}
+
+#operators a {
+	display: block;
+	width: 59px;
+	height: 59px;
+	text-decoration: none;
+	color: #FF2779;
+	text-align: center;
+	line-height: 59px;
+	font-size: 25pt;
+	/*padding: 2px 0px;*/
+	background-color: #0D0525;
+	margin: 7px 0;
+	margin-bottom: 14px;
+	border: 2px #FF2779 solid;
+	border-radius: 50px;
+}
+
+#numbers a {
+	display: block;
+	width: 59px;
+	height: 59px;
+	float: left;
+	text-decoration: none;
+	border: 2px #FF2779 solid;
+	text-align: center;
+	line-height: 59px;
+	font-size: 20pt;
+	/*padding: 2px 0px;*/
+	margin: 7px 7px;
+	color: #FF2779;
+	border-radius: 10px;
+}
+
+#others{
+	width: 300px;
+	padding:5px;
+	margin-left: 5px;
+}
+#others a{
+	display: block;
+	width: 138px;
+	height: 40px;
+	float: left;
+	text-decoration: none;
+	border: 2px #FF2779 solid;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16pt;
+	/*padding: 2px;*/
+	margin: 5px 4px;
+	color: #FF2779;
+	border-radius: 50px;
+}
+
+#numbers a:hover{
+	color:#9c89f6;
+	border: 2px #9c89f6 solid;
+}
+#operators a:hover{
+	color: #3AD39F;
+	border: 2px #3AD39F solid;
+}
+#equals a:hover{
+	color: #A8D3C6;
+	border: 2px #A8D3C6 solid;
+}
+#others a:hover{
+	color: #4CE7F6;
+	border: 2px #4CE7F6 solid;
+}

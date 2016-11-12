@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new example</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<h1>hello jQuery</h1>
+
+	<p class="mouseMe">this is a paragraph with mouse enter and mouse leave events attached via jQuery</p>
+
+	<!--hi show buttons-->
+	<button class="btn btn-danger" id="hideMe">Hide</button>
+	<button class="btn btn-success" id="showMe">Show</button>
+	<button class="btn btn-warning" id="toggleHide">Toggle</button>
+
+	<div class="well">
+		<p>this div will hide show or toggle</p>
+	</div>
+
+		<!--fade buttons-->
+	<button class="btn btn-danger" id="fadeOut">fade out</button>
+	<button class="btn btn-success" id="fadeIn">fade in</button>
+	<button class="btn btn-warning" id="toggleHide">Toggle</button>
+
+	<div class="well" id="fadeMe">
+		<p>this div will hide show or toggle</p>
+	</div>
+
+	<!--slide-->
+	<button class="btn btn-danger" id="slideOut">out</button>
+	<button class="btn btn-success" id="slideIn">in</button>
+	<button class="btn btn-warning" id="toggleSlide">Toggle</button>
+ 
+	<div class="well" id="">
+		<p>this div will hide show or toggle</p>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+ <script type="text/javascript">
+ 	$(document).ready(function(){
+ 		//event
+ 		$(".mouseMe").on({
+ 			mouseenter: function(){
+ 				console.log("mouse has enter the para");
+ 			},
+ 			mouseleave: function(){
+ 				console.log("mouse has left the para");
+ 			},
+ 			dblclick: function(){
+ 				alert("don't click me");
+ 			}
+ 			});
+ 	});
+
+ 	//hide show toggle
+ 	$("#hideMe").click(function(){
+ 		$(".well:first").hide();
+ 	});
+ 	$("#showMe").click(function(){
+ 		$(".well:first").show();
+ 	});
+ 	$("#toggleHide").click(function(){
+ 		$(".well:first").toggle();
+ 	});
+
+ 	//fade
+ 	$("#fadeOut").click(function(){
+    	$("#fadeMe").fadeOut(5000);
+    });
+    $("#fadeIn").click(function(){
+    	$("#fadeMe").fadeOut(5000);
+    });
+
+
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
