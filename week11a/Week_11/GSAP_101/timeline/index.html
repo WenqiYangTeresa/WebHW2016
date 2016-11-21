@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>timeline 101</title>
+	<style type="text/css">
+
+		body{ text-align: center; }
+		.progress{
+			position: relative;
+			z-index:3;
+			background-color: black;
+			width: 100%;
+			height:10px;
+		}
+		h2, p{
+			position: relative;
+			text-shadow: 4px 4px 8px 1px rgba(0,0,0,0.5);
+		}
+	</style>
+</head>
+<body>
+
+
+<div class="progress"></div>
+<div id="page-wrap">
+	<h2>hello Green Sock</h2>
+	<h2>you are awesome!</h2>
+	<p>I justt made my first timeline and that is pretty cool!</p>
+</div>
+<!-- Link to GSAP HERE -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<!--jquery-->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	//wait for DDM to load
+	$(document).ready(function(){
+
+
+//grab the first h2 on our page
+		var $hello = $('h2').eq(0);
+		var $awesome = $('h2').eq(1), 
+			$text = $('p'), 
+			$progress = $('.progress'), 
+			$bg = $('#page-wrap');
+
+//set an initial perspective
+CSSPlugin.defaultTransformPerspective = 800;
+var tl = new TimelineLite();
+
+//we can keep making .from if we don't end the method wth semicolum
+tl.from($hello, 0.5, {left:-500, opacity:0},0.8)
+  .from($awesome, 0.5, {left:-500, opacity:0},0.8)
+  .from($text, 0.8, {top:50, opacity:0}, "+=1.0",0.8)
+  .from(
+  	$progress,
+  	tl.duration(),
+  	{scaleX: 0, transformOrigin:'left', ease: Linear.easeNone},
+  	0);
+  tl.to($progress, 0.2, {opacity:0, top:-8});
+	
+tl.from($bg, 0.8, {opacity:0});
+
+});
+</script>
+</body>
+</html>
