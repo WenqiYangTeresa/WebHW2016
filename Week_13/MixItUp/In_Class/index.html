@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mix It Up</title>
+
+    <!-- Load jQuery First -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- Now load MixItUp (wont work if we dont load JQ first) -->
+    <script type="text/javascript" src="jquery.mixitup.min.js"></script>
+    <!-- Custom Scripts -->
+    <script type="text/javascript">
+    // This is the shorthand version of jQuery's document ready function
+    $(function() {
+        $("#reset").click(function(event){
+            $("#Container").mixItUp('filter')
+        });
+        $("#container").mixItUp();// Instantiate MixItUpHere
+    });
+    </script>
+
+    <style type="text/css">
+        *{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing:border-box;
+        }
+        body{
+            font-family: 'Helvetica Neue', arial, sans-serif;
+        }
+
+        /*control*/
+        .controls{
+            padding:1%;
+            background-color: #111;
+            color: white;
+        }
+
+        label{
+            font-weight: 300;
+            margin: 0 20px 0 0;
+        }
+
+        button{
+            display: inline-block;
+            padding: 5px 10px;
+            border:0;
+            background: #666;
+            color: #EEE;
+            font-size: 16px;
+            font-weight: 100;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:focus{
+            outline: 0 none;
+        }
+
+        button.active, button:hover{
+            background: #999;
+        }
+
+
+        /* mix styles */
+        .container{
+            padding:2%;
+            text-align:justify;
+            font-size: 0.1px; /*invisible*/
+            background-color: #DDD;
+            min-height: 200px;
+        }
+
+        /*this is needed for spacing between mix elements*/
+        .container:after{
+            content:'';
+            display: inline-block;
+            width: 100%;
+        }
+
+        /* mobile first styling this will apply unledd a screen of a certain min width is detected*/
+        .container .mix,
+        .container .gap{
+            display: inline-block;
+            width:100%;
+        }
+
+        .container .mix{
+            text-align: left;
+            background-color: #AAA;
+            margin-bottom: 2%;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .container .mix:after{
+            /*display data attributes or classes using css */
+            content: attr(class);
+            color: crimson;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: top;
+            padding: 4% 6%;
+            font-weight: 300;
+        }
+
+        /*this is optional but lets use another psuedo class selector to add more padding*/
+
+        .container .mix:before{
+            content:'';
+            display: inline-block;
+            padding-top: 60%;
+        }
+
+        /*larger phone and tablet*/
+        @media all and (min-width:768px){
+            .container .mix, .container .gap{
+                width: 48%;
+            }
+        }
+
+        /*larger desktop*/
+        @media all and (min-width: 1024px){
+             .container .mix, .container .gap{
+                width: 24%;
+            }           
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Build our buttons and controls here -->
+    <div class="controls">
+        <!-- Filter -->
+        <label>Filter</label>
+        <button class="filter" data-filter=".dogs">Dogs</button>
+        <button class="filter" data-filter=".cats">Cats</button>
+        <button class="filter" data-filter=".goats">Goats</button>
+        <button id="reset">None</button>
+        <button id="reset">All</button>
+        <!-- Sort -->
+    </div>
+    <!-- This container holds all elements we wish to filter or sort -->
+    <div id="Container" class="container">
+    <!--content to filter and sort-->
+    <div class="mix dogs cats" data-myorder="1"></div>
+    <div class="mix cats" data-myorder="2"></div>
+    <div class="mix dogs" data-myorder="3"></div>
+    <div class="mix goats" data-myorder="4"></div>
+    <div class="mix cats goats" data-myorder="5"></div>
+    <div class="mix dogs goats" data-myorder="6"></div>
+    <!--push the justified position divs to one side-->
+    <div class="gap"></div>
+    <div class="gap"></div>
+    </div>
+</body>
+
+</html>

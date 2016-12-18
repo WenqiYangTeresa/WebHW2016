@@ -1,0 +1,9 @@
+/**************gallery
+*********************/
+section.goats {
+  padding: 25px; }
+  section.goats div.image-gallery {
+    width: 175px;
+    overflow: hidden; }
+
+/*# sourceMappingURL=gallery.css.map */
