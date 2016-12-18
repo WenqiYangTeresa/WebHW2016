@@ -96,7 +96,7 @@ $(document).ready(function(){
 				TweenMax.from("#i11Page", 1.2, {css:{top:"100%"}, ease: Power3.easeOut});
 			});
 			var $i12 = $("#i12");
-			$i11.click(function(){
+			$i12.click(function(){
 				TweenMax.from("#i12Page", 1.2, {css:{top:"100%"}, ease: Power3.easeOut});
 			});
 
